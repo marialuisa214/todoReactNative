@@ -23,13 +23,11 @@ export function Home(){
 
     function handleCompleteTodo(name:String){
         if(todo.includes(name)){
-            console.log("1 caso")
             setTodo((prevState) => prevState.filter((act) =>(act != name)));
             setTodoComplete((prevState) => ([...prevState, name]));
             return;
 
         }else{
-            console.log("2 caso")
             setTodo((prevState) => ([...prevState, name]));
             setTodoComplete((prevState) => prevState.filter((act) =>(act != name)));
             return;
